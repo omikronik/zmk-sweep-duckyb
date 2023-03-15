@@ -80,8 +80,8 @@
        		sym_layer {
 		bindings = <
 		&kp N1   &kp N2   &kp N3   &kp N4   &kp N5		&kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-		&kp HASH &kp PRCNT &kp LBRC &kp RBRC &kp PRCNT   &kp PLUS &kp MINUS &kp EQL &kp QMARK &kp COLON
-		&kp EXCL   &kp AT   &kp LPAR &kp RPAR &kp AMPS	&kp AMPS &kp ASTRK &kp UNDER &kp BSLH &kp PIPE
+		&kp HASH &kp PRCNT &kp LBRC &kp RBRC &kp SQT   &kp PLUS &kp MINUS &kp EQL &kp QMARK &kp COLON
+		&kp EXCL   &kp AT   &kp LPAR &kp RPAR &kp DQT	&kp ASTRK &kp AMPS &kp UNDER &kp BSLH &kp PIPE
 					                &mo FNC  &mo SYM2       &trans &trans
 		>;
 		};
@@ -89,9 +89,9 @@
         // Main modifiers and arrow keys
 		    ext_layer {
 		bindings = <
-		&kp ESC  &trans &trans  &trans  &trans    			        &kp PG_UP  &kp PG_DN &kp HOME &kp END &kp CAPS
+		&kp ESC  &trans &kp LC(LA(v))  &kp LC(LA(r))  &kp LC(LA(b))    			        &kp PG_UP  &kp PG_DN &kp HOME &kp END &kp CAPS
 		&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 			&kp LEFT &kp DOWN  &kp UP &kp RIGHT   &kp DEL
-		&kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp BSPC &trans &trans  &mo SETTINGS
+		&kp LG(Z)  &kp LG(X) &kp LG(C) &kp TAB   &kp LG(V)          &kp LG(BSPC) &kp BSPC &trans &trans  &mo SETTINGS
 					                        &trans &kp LCTRL    &kp ENTER  &mo FNC 
 		>;
 		};
