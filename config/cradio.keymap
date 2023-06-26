@@ -43,24 +43,29 @@
 
     combos {
         compatible = "zmk,combos";
-				// both right thumb keys
+		// both right thumb keys
         combo_accent {
             timeout-ms = <300>;
             key-positions = <32 33>;
             bindings = <&mo ACCENT>;
         };
-				// internal-left & external-right thumb keys
-				combo_sym2 {
-						timeout-ms = <200>;
-						key-positions = <31 33>;
-						bindings = <&mo SYM2>;
-				};
-				// both left thumb keys
-				combo_settings {
-						timeout-ms = <300>;
-						key-positions = <30 31>;
-						bindings = <&mo SETTINGS>;
-				};
+		// internal-left & external-right thumb keys
+		combo_sym2 {
+				timeout-ms = <200>;
+				key-positions = <31 33>;
+				bindings = <&mo SYM2>;
+		};
+		// both left thumb keys
+		combo_settings {
+				timeout-ms = <300>;
+				key-positions = <30 31>;
+				bindings = <&mo SETTINGS>;
+		};
+		combo_fnc {
+			timeout-ms = <300>;
+			key-positions = <33 34>;
+			bindings = <&mo FNC>;
+		}
     };
 
     keymap {
@@ -82,16 +87,16 @@
 		&kp N1   &kp N2   &kp N3   &kp N4   &kp N5		&kp N6 &kp N7 &kp N8 &kp N9 &kp N0
 		&kp HASH &kp PRCNT &kp LBRC &kp RBRC &kp SQT   &kp PLUS &kp MINUS &kp EQL &kp QMARK &kp COLON
 		&kp EXCL   &kp AT   &kp LPAR &kp RPAR &kp DQT	&kp ASTRK &kp AMPS &kp UNDER &kp BSLH &kp PIPE
-					                &mo FNC  &mo SYM2       &trans &trans
+					                &mo FNC  &mo SYM2       &mo FNC &trans
 		>;
 		};
 
         // Main modifiers and arrow keys
 		    ext_layer {
 		bindings = <
-		&kp ESC  &trans &kp LC(LA(V)) &kp LC(LA(R)) &kp LC(LA(B)) 						&kp PG_UP  &kp PG_DN &kp HOME &kp END &kp CAPS
+		&kp ESC  &trans &kp LC(LG(LEFT)) &kp LC(LG(RIGHT)) &trans 						&kp PG_UP  &kp PG_DN &kp HOME &kp END &kp CAPS
 		&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 			&kp LEFT &kp DOWN  &kp UP &kp RIGHT   &kp DEL
-		&kp LG(Z)  &kp LG(X) &kp LG(C) &kp TAB   &kp LG(V)          &kp LA(BSPC) &kp BSPC &kp LG(LC(LS(4))) &trans  &mo SETTINGS
+		&kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp BSPC &kp LG(LS(S)) &trans  &mo SETTINGS
 					                        &trans &kp LCTRL    &kp ENTER  &mo FNC 
 		>;
 		};
@@ -100,7 +105,7 @@
        		fnc_layer {
 		bindings = <
 		&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
-		&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &kp RALT     &kp F11 &kp F12  &kp PRINTSCREEN &trans &trans
+		&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &kp RALT     &kp F11 &kp F12  &kp F5 &kp F12 &kp F11
 		&none &none &none &none &none				          &none &none &none &none &none 
           				           &none &none              &none &none  
 		>;
